@@ -28,6 +28,7 @@ function Header() {
         <button
           type="button"
           className="nav-bar-button textColor btn-hover"
+          title="Home Page"
           style={{ transform: "scale(1)" }}
           onClick={() => {
             history.push("/");
@@ -50,24 +51,13 @@ function Header() {
                 aria-label="toggle menu"
                 className="menu-btn"
                 onClick={openMenuCard}
-                style={{ color: "black" }}
+                title="Menu"
+                style={{ color: "black", transform: "scale(1.5)" }}
               >
                 &#x2630;
               </button>
             </div>
             <div className="nav" id="nav">
-              <div>
-                <button
-                  type="button"
-                  className="nav-bar-button textColor"
-                  onClick={() => {
-                    history.push("/blogs");
-                  }}
-                  aria-label="blogs button"
-                >
-                  <span>blogs</span>
-                </button>
-              </div>
               <div>
                 <button
                   type="button"
@@ -120,7 +110,7 @@ function Header() {
                 history.push("/");
                 closeMenu();
               }}
-              style={{ transform: "scale(1.8)" }}
+              style={{ transform: "scale(2)" }}
             >
               Home
             </button>
@@ -131,6 +121,7 @@ function Header() {
               aria-label="toggle menu"
               className="menu-btn"
               onClick={closeMenu}
+              style={{ transform: "scale(2.5)" }}
             >
               X
             </button>
@@ -141,20 +132,7 @@ function Header() {
             <li>
               <button
                 type="button"
-                className="menu-btn"
-                onClick={() => {
-                  history.push("/blogs");
-                  closeMenu();
-                }}
-                aria-label="blogs"
-              >
-                blogs
-              </button>
-            </li>
-            <li>
-              <button
-                type="button"
-                className="menu-btn"
+                className="menu-btn open-menu-btn"
                 onClick={() => {
                   history.push("/projects");
                   closeMenu();
@@ -167,7 +145,7 @@ function Header() {
             <li>
               <button
                 type="button"
-                className="menu-btn"
+                className="menu-btn open-menu-btn"
                 onClick={() => {
                   history.push("/contact");
                   closeMenu();
@@ -181,7 +159,7 @@ function Header() {
               <button
                 type="button"
                 style={{ color: "red", transform: "scale(1.12)" }}
-                className="menu-btn"
+                className="menu-btn open-menu-btn"
                 onClick={() => {
                   downloadResume();
                   closeMenu();

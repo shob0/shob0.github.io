@@ -5,13 +5,8 @@
 }
 
 body {
-  background-color: white;
+  background-color: #faebd7;
   font-family: "Merriweather Sans", sans-serif;
-  -webkit-user-select: none; /* safari*/
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                      supported by Chrome, Opera and Firefox */
 }
 
 .route-div {
@@ -63,13 +58,8 @@ nav,
 }
 
 .nav-bar-button span {
-  border-bottom: 1px solid black;
+  font-size: 1.5rem;
   border-color: var(--span-color);
-}
-
-.footer {
-  margin-top: 6em;
-  border-width: 0.5px;
 }
 
 .image-div,
@@ -88,12 +78,7 @@ li::before {
 }
 .name {
   text-align: left;
-  font-weight: bolder;
   font-size: 30px;
-}
-.light-content {
-  /* color: #e17366; */
-  color: var(--main-text-color);
 }
 .divider {
   border: 2px solid salmon;
@@ -105,7 +90,7 @@ li::before {
 }
 
 .intro-header {
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 #intro-content {
@@ -114,6 +99,29 @@ li::before {
 
 a {
   color: inherit;
+}
+
+.post {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: snow;
+}
+
+.project-link {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  width: 300px;
+  background-color: aquamarine;
+}
+.project-link:hover {
+  background-color: aliceblue;
+  font-size: 1.1rem;
+  transition: background-color 400ms ease-out;
+  transition: font-size 600ms ease-out;
 }
 
 .btn {
@@ -129,8 +137,7 @@ button:focus {
 }
 
 .btn-hover:hover {
-  background-color: black;
-  color: white;
+  background-color: rgb(255, 228, 255);
   transition: background-color 0.5s ease-in, color 0.5s ease-in;
 }
 
@@ -242,13 +249,6 @@ a {
   }
 }
 
-.iframe {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 20px;
-}
-
 .menu-div {
   display: none;
   transform: scale(2);
@@ -258,7 +258,10 @@ a {
   background-color: inherit;
   border: none;
   font-family: inherit;
-  color: aliceblue;
+}
+
+.open-menu-btn {
+  font-size: 2.5rem;
 }
 
 .hidden {
@@ -297,9 +300,6 @@ a {
   .iframe {
     display: block;
   }
-  .iframe-div {
-    margin-top: 20px;
-  }
 
   .open-menu {
     position: absolute;
@@ -308,8 +308,8 @@ a {
     height: 100vh;
     width: 100vw;
     z-index: 1;
-    background-color: black;
-    color: aliceblue;
+    background-color: rgb(248, 223, 223);
+    color: black;
     animation-name: fadeInLeft;
     animation-duration: 500ms;
   }
@@ -333,9 +333,5 @@ a {
   li {
     list-style: none;
     padding: 10px;
-  }
-
-  .menu-card button {
-    color: aliceblue;
   }
 }

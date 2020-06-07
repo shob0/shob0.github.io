@@ -1,22 +1,23 @@
 import React from "react";
-import WIP from "../WIP";
-import Iframe from "./Iframe";
+import Project from "./Project";
+import { projectList } from "../../../resources/projectList";
 
 function Projects() {
   return (
-    <div className="route-div">
-      <WIP fontSize="16px" color="salmon" marginTop="40px" />
+    <div className="route-div" style={{ textAlign: "center" }}>
+      <h2>my projects and blogs</h2>
+      <hr style={{ width: "300px", marginBottom: "3rem" }} />
       <div className="iframe">
-        <Iframe
-          src="https://codepen.io/shob0/full/ExVQGrd"
-          title="codepen-animation-sidenav"
-          linkText="side navigation animation"
-        />
-        <Iframe
-          src="https://codepen.io/shob0/full/yLYvwmJ"
-          title="codepen-random-user-generator"
-          linkText="random user list generation"
-        />
+        {projectList.map((val, index) => {
+          return (
+            <Project
+              key={index}
+              src={val.url}
+              title={val.title}
+              descirption={val.descirption}
+            />
+          );
+        })}
       </div>
     </div>
   );
