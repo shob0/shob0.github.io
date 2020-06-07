@@ -6,7 +6,7 @@ import Contact from "./Contact";
 // import Blogs from "./Blogs/Blogs";
 import projects from "./Projects/Projects";
 import Notfound from "./notFound";
-import Footer from "./Footer/Footer";
+import Footer from "./Footer";
 
 const App = () => {
   return (
