@@ -12,7 +12,30 @@ body {
     rgba(227, 123, 124, 0.25) 50%,
     rgba(250, 219, 167, 0.25)
   );
+
+  /* background: hsla(120, 93%, 84%, 0.9);
+
+  background: linear-gradient(
+    90deg,
+    hsla(120, 93%, 84%, 0.8) 0%,
+    hsla(185, 90%, 51%, 0.8) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(120, 93%, 84%, 0.8) 0%,
+    hsla(185, 90%, 51%, 0.8) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(120, 93%, 84%, 0.8) 0%,
+    hsla(185, 90%, 51%, 0.8) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#AFFCAF", endColorstr="#12DFF3", GradientType=1 ); */
   font-family: "Merriweather Sans", sans-serif;
+  margin: 0;
 }
 
 .route-div {
