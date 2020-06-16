@@ -1,17 +1,17 @@
 :root {
   --main-bg-color: black;
-  --main-text-color: gray;
   --span-color: gray;
 }
 
 body {
-  /* background-color: #ffe4ff; */
-  background-image: linear-gradient(
-    135deg,
-    rgba(114, 97, 147, 0.25) 25%,
-    rgba(227, 123, 124, 0.25) 50%,
-    rgba(250, 219, 167, 0.25)
-  );
+  background-color: #2d314e;
+  color: snow;
+  /* background-image: linear-gradient(
+      135deg,
+      rgba(114, 97, 147, 0.25) 25%,
+      rgba(227, 123, 124, 0.25) 50%,
+      rgba(250, 219, 167, 0.25)
+    ); */
 
   /* background: hsla(120, 93%, 84%, 0.9);
 
@@ -38,6 +38,9 @@ body {
   margin: 0;
 }
 
+button {
+  color: snow;
+}
 .route-div {
   animation-name: fadeIn;
   animation-duration: 500ms;
@@ -61,9 +64,6 @@ body {
   }
 }
 
-.textColor {
-  color: var(--main-bg-color);
-}
 p,
 h1 {
   margin: 4px;
@@ -86,6 +86,10 @@ nav,
   transition-duration: 0.3s;
 }
 
+.home-btn {
+  width: 12vw;
+}
+
 .nav-bar-button span {
   font-size: 1.5rem;
   border-color: var(--span-color);
@@ -104,6 +108,10 @@ li::before {
 }
 .main {
   padding: 50px 80px 30px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 90vh;
 }
 .name {
   text-align: left;
@@ -144,11 +152,12 @@ a {
   justify-content: center;
   height: 100px;
   width: 300px;
-  background-color: aquamarine;
+  background-color: rgb(35, 172, 126);
 }
 .project-link:hover {
   background-color: aliceblue;
   font-size: 1.1rem;
+  color: #2d314e;
   transition: background-color 400ms ease-out;
   transition: font-size 600ms ease-out;
 }
@@ -166,7 +175,9 @@ button:focus {
 }
 
 .btn-hover:hover {
-  background-color: #ffe4ff;
+  transform: scale(1);
+  background-color: snow;
+  color: #2d314e;
   transition: background-color 0.5s ease-in, color 0.5s ease-in;
 }
 
@@ -264,7 +275,7 @@ a {
 
 .modal {
   animation-name: topslidein;
-  animation-duration: 400ms;
+  animation-duration: 600ms;
 }
 
 @keyframes topslidein {
@@ -289,8 +300,16 @@ a {
   font-family: inherit;
 }
 
+.iframe {
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  grid-template-columns: 50% 50%;
+}
+
 .open-menu-btn {
   font-size: 2.5rem;
+  color: #2d314e;
 }
 
 .hidden {
@@ -331,13 +350,13 @@ a {
   }
 
   .open-menu {
+    border: 1px dashed black;
     position: absolute;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
+    top: 30px;
+    left: 5vw;
+    width: 90vw;
     z-index: 1;
-    background-color: rgb(248, 223, 223);
+    background: snow;
     color: black;
     animation-name: fadeInLeft;
     animation-duration: 500ms;
@@ -351,8 +370,6 @@ a {
   .menu-option {
     display: flex;
     justify-content: center;
-    height: 60vh;
-    align-items: center;
   }
 
   li::before {
@@ -363,4 +380,8 @@ a {
     list-style: none;
     padding: 10px;
   }
+}
+
+footer {
+  text-align: center;
 }

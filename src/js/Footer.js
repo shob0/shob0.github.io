@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div style={{ textAlign: "center", marginTop: "6rem" }}>
+    <footer>
       <a
         href="https://www.facebook.com/shob0"
         title="https://www.facebook.com/shob0"
@@ -20,7 +20,8 @@ function Footer() {
       <a href="https://codepen.io/shob0" title="https://codepen.io/shob0">
         Codepen
       </a>
-    </div>
+      <hr />
+    </footer>
   );
 }
 

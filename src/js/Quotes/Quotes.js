@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 import "./Quotes.css";
 
-function Quotes() {
+function Quotes(props) {
   const [quoteObj, updateQuoteObj] = useState("");
-  const loc = useLocation();
 
   useEffect(() => {
     fetch("https://api.chucknorris.io/jokes/random?category=dev")
@@ -14,20 +12,23 @@ function Quotes() {
       .then(function (data) {
         updateQuoteObj(data);
       });
-    if (loc.pathname !== "/") {
-      document.getElementById("modal").style.display = "none";
-    }
   }, []);
+
   return (
     <div className="modal" id="modal">
       <div className="modal-content">
         <div className="modal-header">
-          <h2>Did you know!!</h2>
+          <img
+            src={quoteObj.icon_url}
+            alt="chuck-norris-cartoon"
+            className="quotes-image"
+          />
+          <h2>Did you know?</h2>
           <button
             className="btn modal-btn"
             type="button"
             onClick={() => {
-              document.getElementById("modal").style.display = "none";
+              props.updateQuote(false);
             }}
           >
             X
@@ -42,7 +43,7 @@ function Quotes() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Chuck Norris
+              chuck norris
             </a>
           </sub>
         </div>

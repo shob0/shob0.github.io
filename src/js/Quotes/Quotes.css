@@ -1,14 +1,17 @@
 .modal {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   z-index: 1;
+  top: 0;
+  left: 0;
   color: black;
   font-weight: 400;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: hsla(120, 93%, 84%, 0.9);
-
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  /* 
   background: linear-gradient(
     135deg,
     rgba(114, 97, 147, 0.5) 25%,
@@ -28,22 +31,26 @@
     rgba(114, 97, 147, 0.5) 25%,
     rgba(227, 123, 124, 0.5) 50%,
     rgba(250, 219, 167, 0.7)
-  );
+  ); */
 
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#AFFCAF", endColorstr="#12DFF3", GradientType=1 );
 }
 
 .modal-content {
   position: relative;
-  background-color: azure;
-  top: 20%;
+  background-color: #2ec1aa;
+  color: aliceblue;
+  top: 15%;
   left: 27%;
   width: 46%;
   border: 1px solid saddlebrown;
-  border-radius: 25px;
-  height: 250px;
+  text-align: center;
 }
 
+.quotes-image {
+  height: inherit;
+  width: inherit;
+}
 .modal-header {
   border-bottom: 2px solid green;
   padding: 0.6rem;
@@ -70,15 +77,22 @@
 }
 
 .modal-body {
-  font-size: 1.3rem;
+  font-size: 3vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media only screen and (max-width: 600px) {
   .modal-content {
-    width: 98%;
+    width: 80%;
     margin: 0 auto;
     left: 0;
     min-height: 300px;
     height: auto;
+  }
+  .modal-body {
+    font-size: 1rem;
   }
 }

@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import Quotes from "./Quotes/Quotes";
 
 import resume from "../../resources/resume.pdf";
 
 function Header() {
+  const [showQuote, updateShowQuote] = useState(false);
   let history = useHistory();
 
   const openMenuCard = () => {
@@ -24,23 +26,21 @@ function Header() {
 
   return (
     <div className="header">
+      {showQuote === true && <Quotes updateQuote={updateShowQuote} />}
       <header>
         <button
           type="button"
-          className="nav-bar-button textColor btn-hover"
+          className="nav-bar-button btn-hover home-btn"
           title="Home Page"
-          style={{ transform: "scale(1)" }}
           onClick={() => {
             history.push("/");
           }}
         >
-          <div style={{ display: "inline-block" }}>
-            <div className="name">
-              <p>shobhit</p>
-            </div>
-            <div style={{ marginLeft: "60px" }} className="name">
-              <p>singh</p>
-            </div>
+          <div>
+            <p className="name">shobhit</p>
+            <p className="name" style={{ marginLeft: "60px" }}>
+              singh
+            </p>
           </div>
         </button>
         <div>
@@ -48,16 +48,39 @@ function Header() {
             <div className="menu-div">
               <button
                 type="button"
+                className="menu-btn"
+                onClick={() => {
+                  updateShowQuote(true);
+                }}
+                aria-label="projects button"
+              >
+                <span style={{ color: "orange" }}>joke?</span>
+              </button>
+              <button
+                type="button"
                 aria-label="toggle menu"
                 className="menu-btn"
                 onClick={openMenuCard}
                 title="Menu"
-                style={{ color: "black", transform: "scale(1.5)" }}
+                style={{ transform: "scale(1.5)" }}
               >
                 &#x2630;
               </button>
             </div>
+
             <div className="nav" id="nav">
+              <div>
+                <button
+                  type="button"
+                  className="nav-bar-button"
+                  onClick={() => {
+                    updateShowQuote(true);
+                  }}
+                  aria-label="projects button"
+                >
+                  <span style={{ color: "orange" }}>care for a joke!!</span>
+                </button>
+              </div>
               <div>
                 <button
                   type="button"
@@ -110,7 +133,7 @@ function Header() {
                 history.push("/");
                 closeMenu();
               }}
-              style={{ transform: "scale(2)" }}
+              style={{ transform: "scale(2)", color: "#2d314e" }}
             >
               Home
             </button>
@@ -121,7 +144,7 @@ function Header() {
               aria-label="toggle menu"
               className="menu-btn"
               onClick={closeMenu}
-              style={{ transform: "scale(2.5)" }}
+              style={{ transform: "scale(2.5)", color: "#2d314e" }}
             >
               X
             </button>
@@ -158,7 +181,7 @@ function Header() {
             <li>
               <button
                 type="button"
-                style={{ color: "red", transform: "scale(1.12)" }}
+                style={{ color: "red" }}
                 className="menu-btn open-menu-btn"
                 onClick={() => {
                   downloadResume();

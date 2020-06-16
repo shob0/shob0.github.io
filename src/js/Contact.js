@@ -11,10 +11,7 @@ function Contact() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button
-              className="btn textColor contact-btn"
-              style={Styles.contactBtn}
-            >
+            <button className="btn btn-hover" style={Styles.contactBtn}>
               <span className="large-text">Email</span>
             </button>
           </a>
@@ -26,10 +23,7 @@ function Contact() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button
-              className="btn  textColor contact-btn"
-              style={Styles.contactBtn}
-            >
+            <button className="btn btn-hover" style={Styles.contactBtn}>
               <span className="large-text">Phone</span>
             </button>
           </a>
@@ -43,10 +37,7 @@ function Contact() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button
-              className="btn  textColor contact-btn"
-              style={Styles.contactBtn}
-            >
+            <button className="btn btn-hover" style={Styles.contactBtn}>
               <span className="large-text">Github</span>
             </button>
           </a>
@@ -58,10 +49,7 @@ function Contact() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button
-              className="btn  textColor contact-btn"
-              style={Styles.contactBtn}
-            >
+            <button className="btn btn-hover" style={Styles.contactBtn}>
               <span className="large-text">LinkedIn</span>
             </button>
           </a>
